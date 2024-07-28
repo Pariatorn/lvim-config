@@ -9,20 +9,20 @@ This configuration includes all the the LunarVim features and extends them with 
 ### Prerequisites
 Installation might be differ on certain distros. Here are the the most important packages:
 
-    ```
-    git
-    make
-    pip
-    python
-    npm
-    node
-    cargo
-    ripgrep
-    lazygit (optional)
-    texlive
-    zathura (optional)
-    okular (optional)
-    ```
+```
+git
+make
+pip
+python
+npm
+node
+cargo
+ripgrep
+lazygit (optional)
+texlive
+zathura (optional)
+okular (optional)
+```
 
 If you do not wish to use Zathura and Okular, you may change the corresponding lines in the [lvim/config.lua](lvim/config.lua). If you plan to use Zathura, consider to have a look into [zathura/zathurarc](zathura/zathurarc) and move it into your `~/.config/zathura/` folder.
 
@@ -32,14 +32,14 @@ Remember you may find out more about problems via `:checkhealth` in lvim.
 Either visit their [website](https://www.lunarvim.org/docs/installation) and check out the official guide or follow these instructions here (may be deprecated!):
 
 - Stable version (release):
-    ```bash
-    LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
-    ```
+```bash
+LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
+```
 
 - Nightly (preferred):
-    ```bash
-    bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-    ```
+```bash
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+```
 
 LunarVim is then launchable with `lvim` from terminal. If there is a problem you need to include your `~/.local/bin/` in the `PATH` of your `.bashrc` or `.zshrc`.
 
@@ -57,20 +57,20 @@ Plugin updates are done inside lvim via `:LsyncCorePlugins`
 For a smooth experience as an alternative to the stock terminal, [Kitty](https://github.com/kovidgoyal/kitty) as well as [Fish](https://fishshell.com/) may be interesting. The config files deployed in this repo may be a great starting point for the configuration ([fish](fish) and [kitty/kitty.conf](kitty/kitty.conf)). Put both into `~/.config/` in the corresponding sub folders.
 
 Furthermore there is [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) as well as sashimi:
-    ```bash
-    curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-    omf install sashimi
-    ```
+```bash
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+omf install sashimi
+```
 
 ### Zotero (Optional for better bib management)
 It is highly recommended to use Zotero for managing larger bibliographies which you might want to use to write some stuff in LaTex. Download and extract the [Zotero tarball](https://www.zotero.org/download/) in `~/Downloads` and use following commands to install:
 
-    ```bash
-    sudo mv ~/Downloads/Zotero_linux-x86_64 /opt/zotero
-    cd /opt/zotero
-    sudo ./set_launcher_icon
-    sudo ln -s /opt/zotero/zotero.desktop ~/.local/share/applications/zotero.desktop
-    ``` 
+```bash
+sudo mv ~/Downloads/Zotero_linux-x86_64 /opt/zotero
+cd /opt/zotero
+sudo ./set_launcher_icon
+sudo ln -s /opt/zotero/zotero.desktop ~/.local/share/applications/zotero.desktop
+```
 
 Another great addition for Zothero is [Better-BibTex](https://retorque.re/zotero-better-bibtex/installation/). Download the `.xpi` and go into `Tools -> Add-ons` and click the gear symbol in the upper right hand corner selecting `Install Add-on from File` and navigat to the `.xpi` file. Go to `Edit -> Preferences -> BetterBibTex` and set citation key format to your likings (e.g. `[auth][year]`). You may want an automatic sync as well. This is easily possible with an Zotero account for example.
 To make Better-BibTex update your library automatically just define a directory where you like to have it and select `Export Library`. Under the `Format` dropdown menu choose `Better BibTex` and `Keep Updated`.
