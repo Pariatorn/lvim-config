@@ -1,6 +1,6 @@
 # LunarVim config setup with Kitty and VimTex
 
-This setup is using the [LunarVim IDE layer for Neovim](https://www.lunarvim.org/), parts of [benbrastmckie's nvim config data](https://github.com/benbrastmckie/.config), luasnip ideas from [Ejamastnak's Supercharged latex series](https://ejmastnak.com/tutorials/vim-latex/intro/) as well as my [fork](https://github.com/Pariatorn/.config) of his config.
+This setup is using the [LunarVim IDE layer for Neovim](https://www.lunarvim.org/), parts of [benbrastmckie's nvim config data](https://github.com/benbrastmckie/.config), my [fork](https://github.com/Pariatorn/.config) of his config as well as luasnip ideas from [Ejamastnak's Supercharged latex series](https://ejmastnak.com/tutorials/vim-latex/intro/).
 
 ## Features
 
