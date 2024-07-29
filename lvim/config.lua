@@ -4,6 +4,10 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
+vim.opt.relativenumber = true
+vim.opt.wrap = true
+vim.opt.showbreak = "  "
+
 -- getting own snippets setup
 lvim.builtin.luasnip.sources.friendly_snippets = false
 
