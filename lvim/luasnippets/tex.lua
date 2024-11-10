@@ -29,7 +29,7 @@ return {
   ),
   s(
     { trig = "lrc", dscr = "left right delimiters with curly bracktes" },
-    fmta([[\left\\{ <> \right\\}]], { i(0) }),
+    fmta([[\left\{ <> \right\}]], { i(0) }),
     { condition = in_mathzone }
   ),
   s(
@@ -263,4 +263,7 @@ return {
   s({ trig = "tref", dscr = "Tabular reference" }, fmta([[\ref{tab:<>}]], { i(1) }), { condition = in_text }),
 
   s({ trig = "cit", dscr = "Cite" }, fmta([[\cite{<>}]], { i(1) }), { condition = in_text }),
+
+  -- misc
+  s({ trig = "qty", dscr = "siunitx number and unit" }, fmta([[\qty{<>}{<>}]], { i(1), i(2) }))
 }

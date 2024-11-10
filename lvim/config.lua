@@ -37,6 +37,29 @@ lvim.plugins = {
   }
 }
 
+-- Keymap to navigate through soft wrapped lines
+vim.api.nvim_set_keymap("n", "j", "gj", { noremap = true })
+vim.api.nvim_set_keymap("n", "k", "gk", { noremap = true })
+
+-- Function to toggle navigation through soft wrapped lines
+function toggle_soft_wrap()
+  local toggle_status = vim.g.toggle_soft_wrap
+  if toggle_status == nil or toggle_status == false then
+    vim.g.toggle_soft_wrap = true
+    vim.api.nvim_set_keymap("n", "j", "j", { noremap = true })
+    vim.api.nvim_set_keymap("n", "k", "k", { noremap = true })
+  else
+    vim.g.toggle_soft_wrap = false
+    vim.api.nvim_set_keymap("n", "j", "gj", { noremap = true })
+    vim.api.nvim_set_keymap("n", "k", "gk", { noremap = true })
+  end
+end
+
+lvim.builtin.which_key.mappings["t"] = {
+  name = "+toggle",
+  s = { "<cmd>lua toggle_soft_wrap()<CR>", "Toggle soft wrapping" },
+}
+
 -- WhickKey spell options
 lvim.builtin.which_key.mappings["S"] = {
   name = "Spell checking",
